@@ -21,14 +21,14 @@ body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 85%;  /* Adjusted to fit better on smaller screens */
-    max-width: 480px; /* Smaller max-width for mobile optimization */
+    width: 85%;
+    max-width: 480px;
     margin: 10px;
 }
 
 /* Heading styles */
 h1 {
-    font-size: 2em; /* Slightly smaller heading for mobile */
+    font-size: 2em;
     margin-bottom: 20px;
     color: #FF1493;
     font-family: 'Georgia', serif;
@@ -37,7 +37,7 @@ h1 {
 
 /* Message styles */
 .message {
-    font-size: 1.1em;  /* Adjusted for smaller screens */
+    font-size: 1.1em;
     color: #F56D91;
     margin-bottom: 30px;
 }
@@ -48,13 +48,13 @@ h1 {
     color: white;
     border: none;
     padding: 12px 25px;
-    font-size: 1.1em; /* Slightly smaller font size */
+    font-size: 1.1em;
     border-radius: 8px;
     cursor: pointer;
     margin: 10px;
     transition: background-color 0.3s;
-    width: 100%; /* Full width for better tap targets on mobile */
-    max-width: 250px; /* Ensures the button is not too wide */
+    width: 100%;
+    max-width: 250px;
 }
 
 .btn:hover {
@@ -75,7 +75,6 @@ h1 {
     animation: moveHeart 2s infinite;
 }
 
-/* Floating hearts animation */
 .heart-floating {
     position: absolute;
     top: 10%;
@@ -84,7 +83,6 @@ h1 {
     animation: floatHearts 8s linear infinite;
 }
 
-/* Heart shape and animation */
 .heart {
     width: 30px;
     height: 30px;
@@ -107,10 +105,10 @@ h1 {
     }
 }
 
-/* Valentine Image style */
+/* Valentine Image style (adjusted for better responsiveness) */
 .valentine-img {
-    width: 100%;  /* Make the image responsive */
-    height: auto;
+    width: 100%;  /* Image width takes up 100% of the parent container */
+    height: auto;  /* Keep the aspect ratio intact */
     margin: 20px 0;
     max-width: 350px;  /* Set a max width for the image */
     border-radius: 10px;
@@ -120,42 +118,46 @@ h1 {
 /* For mobile screens, adjust layout */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8em;  /* Reduce heading size */
+        font-size: 1.8em;
     }
 
     .container {
         padding: 20px;
-        width: 90%;  /* Slightly increase width */
+        width: 90%;
     }
 
     .message {
-        font-size: 1em; /* Adjust message size for small screens */
+        font-size: 1em;
     }
 
     .btn {
         font-size: 1em;
-        padding: 10px 20px;  /* Adjust padding for mobile */
+        padding: 10px 20px;
     }
 
     .valentine-img {
-        width: 90%; /* Responsive image size */
-        max-width: 300px; /* Restrict max width */
+        width: 100%; /* Image takes full width on small screens */
+        max-width: 280px; /* Adjust image width */
     }
 }
 
-/* For iPhone 16 screen size (assuming it's roughly a modern large phone screen) */
+/* For iPhone 16 screen size (or larger phones) */
 @media (max-width: 800px) {
     .container {
-        width: 85%;  /* Slightly smaller container width */
+        width: 85%;
         max-width: 500px;
     }
 
     h1 {
-        font-size: 2.2em; /* A bit bigger on larger phones */
+        font-size: 2.2em;
     }
 
     .btn {
         font-size: 1.1em;
     }
-}
 
+    .valentine-img {
+        width: 100%; /* Full-width image for larger phones */
+        max-width: 350px; /* Limit max size */
+    }
+}
