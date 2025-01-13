@@ -33,4 +33,29 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     document.querySelector('.message').classList.add('hidden');
     document.querySelectorAll('.btn').forEach((btn) => btn.classList.add('hidden'));
   });
+
+document.getElementById('yes-btn').addEventListener('click', function() {
+  // Hide the question and the buttons
+  document.querySelector('h1').style.display = 'none';
+  document.querySelector('.message').style.display = 'none';
+  document.getElementById('yes-btn').style.display = 'none';
+  document.getElementById('no-btn').style.display = 'none';
+  
+  // Show the response message
+  document.getElementById('response-message').innerHTML = 'Yay! I’m so happy! 💖';
+  document.getElementById('response-message').classList.remove('hidden');
+});
+
+document.getElementById('no-btn').addEventListener('click', function() {
+  // Hide the question and the buttons
+  document.querySelector('h1').style.display = 'none';
+  document.querySelector('.message').style.display = 'none';
+  document.getElementById('yes-btn').style.display = 'none';
+  document.getElementById('no-btn').style.display = 'none';
+  
+  // Show the response message
+  document.getElementById('response-message').innerHTML = 'Oh no... maybe next time 😢';
+  document.getElementById('response-message').classList.remove('hidden');
+});
+
   
