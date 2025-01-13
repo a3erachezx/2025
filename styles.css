@@ -7,11 +7,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto; /* Allow content to grow and scroll */
   background: linear-gradient(to bottom right, #FAD0C4, #FF69B4); /* Gradient background */
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-  position: relative; /* Ensure hearts are positioned correctly */
+  position: relative;
+  overflow: auto; /* Allow overflow and scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 /* Container styles */
@@ -60,11 +60,6 @@ h1 {
 .btn:hover {
   background-color: #FF1493;
   transform: scale(1.1); /* Slight scaling effect on hover */
-}
-
-/* Hidden class (for elements that will be hidden) */
-.hidden {
-  display: none;
 }
 
 /* Heart animation (bouncing hearts above the container) */
@@ -146,46 +141,33 @@ h1 {
 /* For iPads and Tablets (max-width: 768px) */
 @media (max-width: 768px) {
   body {
-    height: auto; /* Allow body to scroll on small screens */
     padding: 10px;
   }
 
   .container {
     width: 90%;
-    max-width: 450px; /* Reduce max width for smaller screens */
-    padding: 20px; /* Reduce padding */
+    max-width: 450px;
+    padding: 20px;
   }
 
   h1 {
-    font-size: 2em; /* Smaller font size for mobile */
-  }
-
-  .message {
-    font-size: 1em; /* Slightly smaller message text */
+    font-size: 2em;
   }
 
   .btn {
-    font-size: 1em; /* Smaller button size for mobile */
+    font-size: 1em;
     padding: 10px 20px;
   }
 
   .valentine-img {
-    width: 250px; /* Make the image smaller for mobile */
-  }
-
-  .heart-floating {
-    top: 5%;
+    width: 250px;
   }
 }
 
 /* For smaller mobile screens like iPhones SE (max-width: 480px) */
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.8em; /* Further reduce font size */
-  }
-
-  .message {
-    font-size: 0.9em; /* Smaller font size for smaller screens */
+    font-size: 1.8em;
   }
 
   .btn {
@@ -194,10 +176,6 @@ h1 {
   }
 
   .valentine-img {
-    width: 220px; /* Further reduce image size */
-  }
-
-  .heart-floating {
-    top: 3%; /* Adjust positioning for smaller screens */
+    width: 220px;
   }
 }
